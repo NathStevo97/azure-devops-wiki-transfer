@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.2
+    hooks:
+      - id: ruff-check
+        name: Ruff Check
+        args: [ "--fix", "--ignore=BLE001,TRY002"]
+      - id: ruff-format
+        name: Ruff Format
+  
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.12.3
+    hooks:
+      - id: uv-lock
